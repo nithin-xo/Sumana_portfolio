@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>V Sumana | Psychology Digital Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B2A41;--beige:#F2EBDD;--sand:#D9CDB6;--paper:#FFFFFF;--ink:#2B3442;--mute:#5E6672;--bg:#FFFFFF;--alt:#F2EBDD;--card:#FFFFFF;--line:#D9CDB6;--head:#1B2A41;--accent:#1B2A41;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121B2B;--alt:#1B2A41;--card:#223351;--line:#3A4B6A;--ink:#E7E1D3;--mute:#B5B8BF;--head:#F2EBDD;--accent:#F2EBDD}}
+:root[data-theme="dark"]{--bg:#121B2B;--alt:#1B2A41;--card:#223351;--line:#3A4B6A;--ink:#E7E1D3;--mute:#B5B8BF;--head:#F2EBDD;--accent:#F2EBDD}
+html{scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--head);line-height:1.2;margin:0 0 .5rem}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);margin-bottom:1.5rem}
+h3{font-size:1.15rem}
+p{margin:0 0 .9rem;max-width:68ch}
+a{color:inherit}
+:focus-visible{outline:3px solid #B08D57;outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+nav{position:sticky;top:0;z-index:20;background:var(--navy);padding-top:env(safe-area-inset-top,0px)}
+nav .wrap{display:flex;gap:.25rem;overflow-x:auto;scrollbar-width:none}
+nav a{color:#F2EBDD;text-decoration:none;padding:1.1rem .8rem;font-size:.9rem;white-space:nowrap;border-bottom:3px solid transparent}
+nav a:hover{border-color:#D9CDB6}
+.hero{background:var(--navy);color:#F2EBDD;padding:3.5rem 0 4.5rem}
+.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:2.5rem;align-items:center}
+.hero h1{color:#fff;font-size:clamp(2.6rem,8vw,4.6rem);letter-spacing:-.02em}
+.hero .tag{font-family:Fraunces,Georgia,serif;font-size:clamp(1.15rem,3vw,1.5rem);color:#D9CDB6;margin-bottom:1rem}
+.hero p{color:#E4DDCC}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:999px;text-decoration:none;font-weight:500;border:1.5px solid #D9CDB6;color:#F2EBDD}
+.btn.fill{background:#F2EBDD;color:#1B2A41}
+.arch{justify-self:center;width:min(100%,300px);aspect-ratio:4/5;border-radius:150px 150px 14px 14px;overflow:hidden;border:6px solid #F2EBDD;box-shadow:14px 14px 0 #D9CDB6}
+.arch img{width:100%;height:100%;object-fit:cover;display:block}
+.facts{background:var(--alt);border-bottom:1px solid var(--line)}
+.facts .wrap{display:flex;flex-wrap:wrap;gap:.5rem 2rem;padding-top:1rem;padding-bottom:1rem;font-size:.95rem}
+.facts b{color:var(--head)}
+section{padding:4rem 0}
+section.alt{background:var(--alt)}
+.grid{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.3rem}
+.card p:last-child{margin-bottom:0}
+.meta{color:var(--mute);font-size:.9rem}
+.tl{border-left:2px solid var(--sand);margin-left:.4rem;padding-left:1.5rem}
+.tl .item{position:relative;padding-bottom:1.6rem}
+.tl .item::before{content:"";position:absolute;left:calc(-1.5rem - 7px);top:.45rem;width:12px;height:12px;border-radius:50%;background:var(--navy);border:2px solid var(--bg)}
+.tl h3{margin:0}
+ul.clean{margin:.4rem 0 0;padding-left:1.1rem}
+ul.clean li{margin-bottom:.35rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chips span{background:var(--alt);border:1px solid var(--line);border-radius:999px;padding:.3rem .8rem;font-size:.92rem}
+section.alt .chips span{background:var(--card)}
+.two{display:grid;gap:2rem;grid-template-columns:1fr 1fr}
+.flow{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));counter-reset:s}
+.flow div{background:var(--navy);color:#F2EBDD;border-radius:12px;padding:1rem;font-size:.93rem;position:relative}
+.flow div b{display:block;font-family:Fraunces,Georgia,serif;font-size:1.05rem;margin-bottom:.2rem;color:#fff}
+.flow div::before{counter-increment:s;content:counter(s);position:absolute;top:-.7rem;left:.9rem;background:#D9CDB6;color:#1B2A41;width:1.5rem;height:1.5rem;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.8rem}
+.flip{font:inherit;color:inherit;text-align:left;cursor:pointer;width:100%;min-height:190px}
+.flip .back{display:none}
+.flip[aria-pressed="true"] .front{display:none}
+.flip[aria-pressed="true"] .back{display:block}
+.flip[aria-pressed="true"]{background:var(--navy);color:#F2EBDD;border-color:var(--navy)}
+.flip small{display:block;margin-top:.8rem;color:var(--mute)}
+.flip[aria-pressed="true"] small{color:#D9CDB6}
+.breath{display:grid;justify-items:center;gap:1rem;text-align:center}
+.orb{width:150px;height:150px;border-radius:50%;background:var(--navy);color:#F2EBDD;display:grid;place-items:center;font-family:Fraunces,Georgia,serif;font-size:1.1rem;transition:transform 4s ease-in-out;border:6px solid var(--sand)}
+.orb.in{transform:scale(1.35)}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:.7rem .8rem;text-align:left;vertical-align:top;font-size:.93rem}
+th{background:var(--navy);color:#F2EBDD;font-weight:500}
+.refs li{margin-bottom:.7rem;padding-left:1.6rem;text-indent:-1.6rem;max-width:80ch}
+footer{background:var(--navy);color:#D9CDB6;padding:2rem 0;font-size:.9rem}
+footer p{max-width:none;margin:0 0 .4rem}
+@media (max-width:760px){.hero .wrap,.two{grid-template-columns:1fr}.arch{order:-1;width:230px;box-shadow:10px 10px 0 #D9CDB6}section{padding:3rem 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.orb{transition:none}}
+</style>
+</head>
+<body>
+<nav aria-label="Portfolio sections"><div class="wrap">
+<a href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a><a href="#experience">Experience</a><a href="#content">Content</a><a href="#strategy">Strategy</a><a href="#ethics">Ethics</a><a href="#reflection">Reflection</a><a href="#references">References</a>
+</div></nav>
+
+<header class="hero" id="home"><div class="wrap">
+<div>
+<h1>V Sumana</h1>
+<p class="tag">Learning to understand people, one observation at a time.</p>
+<p>B.Sc. (Hons.) Psychology, 2nd year, PES University, Bangalore. This is my digital portfolio for Managing Digital Design and Media: my background, my work so far, and psychology content I created myself.</p>
+<div class="btns"><a class="btn fill" href="#experience">See my experience</a><a class="btn" href="#content">Read my content</a></div>
+</div>
+<div class="arch"><img src="data:image/jpeg;base64,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" alt="Portrait of V Sumana in a denim jacket"></div>
+</div></header>
+<div class="facts"><div class="wrap">
+<span><b>Email</b> <a href="mailto:vsumana29906@gmail.com">vsumana29906@gmail.com</a></span>
+<span><b>Phone</b> <a href="tel:+917411025985">7411025985</a></span>
+<span><b>Location</b> Bangalore, India</span>
+</div></div>
+
+<section id="about"><div class="wrap">
+<h2>About me</h2>
+<div class="two">
+<div>
+<h3>Career objective</h3>
+<p>I am a second-year Psychology undergraduate looking to gain practical experience and build my research skills. I want to apply what I learn in class to real-world settings and explore opportunities in psychology.</p>
+<h3>Professional bio</h3>
+<p>I study Psychology at PES University and have spent time observing therapy and special education sessions through a community-based internship. I enjoy research work, from literature reviews to questionnaires, and I like writing things up clearly and carefully.</p>
+</div>
+<div>
+<h3>Areas of interest</h3>
+<div class="chips"><span>Child development</span><span>Special education</span><span>Psychological assessment</span><span>Research methods</span><span>Case reports</span></div>
+</div>
+</div>
+</div></section>
+
+<section id="education" class="alt"><div class="wrap">
+<h2>Education</h2>
+<div class="tl">
+<div class="item"><h3>B.Sc. (Hons.) Psychology</h3><p class="meta">PES University, Bangalore</p><p>Currently in 2nd year. Expected graduation: 2029.</p></div>
+<div class="item"><h3>Class 12</h3><p class="meta">ISBR Deeksha</p><p>Passing year: 2025.</p></div>
+<div class="item"><h3>Class 10</h3><p class="meta">ACTS Secondary School</p><p>Passing year: 2023.</p></div>
+</div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience and skills</h2>
+<div class="grid">
+<div class="card"><h3>Sakya Foundation</h3><p class="meta">Community-based internship</p>
+<ul class="clean"><li>Observed and participated in speech therapy, occupational therapy and special education sessions.</li><li>Took part in activities involving children with special needs.</li><li>Learned about individual learning needs, positive reinforcement and behavioural development.</li></ul></div>
+<div class="card"><h3>Volunteering</h3>
+<ul class="clean"><li><b>TAMS 2025:</b> Disciplinary Committee.</li><li><b>Psychology Summit 2026:</b> volunteered and assisted with event-related responsibilities.</li><li><b>Aatmatrisha 2026:</b> Disciplinary Committee.</li></ul></div>
+<div class="card"><h3>Academic projects</h3>
+<ul class="clean"><li>Psychology literature reviews</li><li>Psychological case reports</li><li>Psychological assessment activities</li><li>Research assignments</li><li>Questionnaire-based research and basic data interpretation</li></ul></div>
+</div>
+<h3 style="margin-top:2.2rem">Skills</h3>
+<div class="grid">
+<div><p class="meta">Psychology and research</p><div class="chips"><span>Research methodology</span><span>Literature review</span><span>Observation</span><span>Case report writing</span><span>Basic psychological assessment</span></div></div>
+<div><p class="meta">Technical</p><div class="chips"><span>Microsoft Word</span><span>Microsoft PowerPoint</span><span>Google Forms</span><span>Jamovi (basic)</span></div></div>
+<div><p class="meta">Personal</p><div class="chips"><span>Communication</span><span>Teamwork</span><span>Time management</span><span>Organisation</span><span>Attention to detail</span></div></div>
+</div>
+</div></section>
+
+<section id="content" class="alt"><div class="wrap">
+<h2>Psychology content I created</h2>
+<p>Three original pieces for college students and the general public. Each is written in plain language and sourced in the references.</p>
+
+<h3 style="margin-top:1.6rem">1. Infographic: what happens in your body under stress</h3>
+<div class="flow" role="list">
+<div role="listitem"><b>You assess</b>The mind judges whether a situation is a threat and whether you can cope with it.</div>
+<div role="listitem"><b>Alarm</b>The body releases adrenaline. Heart rate and breathing speed up.</div>
+<div role="listitem"><b>Fuel</b>Cortisol is released, giving the body energy to respond.</div>
+<div role="listitem"><b>Recovery</b>When the pressure passes, the body settles. Rest and slow breathing help it along.</div>
+</div>
+<p class="meta" style="margin-top:.8rem">Stress is a normal response. It becomes a concern when it stays high for long periods. Sources: Lazarus &amp; Folkman (1984); American Psychological Association (2018).</p>
+
+<h3 style="margin-top:2rem">2. Awareness poster: myth or fact? (tap a card)</h3>
+<div class="grid">
+<button class="card flip" aria-pressed="false"><span class="front"><b>Myth:</b> “Mental health problems are rare.”<small>Tap to reveal the fact</small></span><span class="back"><b>Fact:</b> The World Health Organization estimated that about 1 in 8 people worldwide lived with a mental disorder in 2019.<small>WHO (2022)</small></span></button>
+<button class="card flip" aria-pressed="false"><span class="front"><b>Myth:</b> “Only serious problems deserve support.”<small>Tap to reveal the fact</small></span><span class="back"><b>Fact:</b> Talking to someone early about stress, low mood or worry can stop difficulties from growing. You do not need to wait for a crisis.<small>WHO (2022)</small></span></button>
+<button class="card flip" aria-pressed="false"><span class="front"><b>Myth:</b> “Positive reinforcement is just bribery.”<small>Tap to reveal the fact</small></span><span class="back"><b>Fact:</b> Reinforcement is a reward that follows a behaviour and makes it more likely to happen again. It is a well-studied learning principle.<small>Skinner (1953)</small></span></button>
+</div>
+
+<h3 style="margin-top:2rem">3. Short blog post: why encouragement works</h3>
+<div class="card">
+<p>When someone tries something hard and we respond with specific, genuine praise, they are more likely to try again. Psychologists call this positive reinforcement: a pleasant consequence that follows a behaviour and makes it more likely to be repeated (Skinner, 1953).</p>
+<p>The key is to be specific. “Great job” is nice, but “I noticed you kept going even when it got tricky” tells a person exactly what to repeat. This idea is used in classrooms, therapy and everyday life, and it is one I am learning more about through my coursework and internship.</p>
+</div>
+
+<h3 style="margin-top:2rem">Multimedia: try a slow-breathing exercise</h3>
+<p>An interactive animation to go with the stress infographic. Many people find slow breathing calming. If you feel dizzy, stop and breathe normally.</p>
+<div class="card breath">
+<div class="orb" id="orb" aria-live="polite">Ready</div>
+<button class="btn fill" id="bb" style="cursor:pointer;border:0;font:inherit;font-weight:500;background:var(--navy);color:#F2EBDD">Start</button>
+</div>
+<p class="meta" style="margin-top:.8rem">Formats used in this portfolio: infographic, interactive animation, and images.</p>
+</div></section>
+
+<section id="strategy"><div class="wrap">
+<h2>Content strategy: a one-week campaign</h2>
+<div class="grid">
+<div class="card"><h3>Topic</h3><p>Managing exam stress among college students.</p></div>
+<div class="card"><h3>Audience</h3><p>College students aged 18 to 22 in India.</p></div>
+<div class="card"><h3>Platform</h3><p>Instagram: carousels, reels and stories.</p></div>
+</div>
+<h3 style="margin-top:1.8rem">Three content pillars</h3>
+<div class="grid">
+<div class="card"><h3>Understand</h3><p>Explain what stress is and busts common myths.</p></div>
+<div class="card"><h3>Practise</h3><p>Share small coping tools students can use today.</p></div>
+<div class="card"><h3>Connect</h3><p>Encourage checking in on friends and asking for help.</p></div>
+</div>
+<h3 style="margin-top:1.8rem">One-week content calendar</h3>
+<div class="tbl"><table>
+<tr><th>Day</th><th>Pillar</th><th>Format</th><th>Post</th></tr>
+<tr><td>Monday</td><td>Understand</td><td>Carousel</td><td>What is stress, really?</td></tr>
+<tr><td>Tuesday</td><td>Practise</td><td>Reel</td><td>A one-minute slow-breathing guide</td></tr>
+<tr><td>Wednesday</td><td>Understand</td><td>Single post</td><td>Myth or fact: stress and mental health</td></tr>
+<tr><td>Thursday</td><td>Practise</td><td>Story</td><td>A study-break checklist</td></tr>
+<tr><td>Friday</td><td>Connect</td><td>Story poll</td><td>How are you really doing this week?</td></tr>
+<tr><td>Saturday</td><td>Connect</td><td>Carousel</td><td>Where to find support, including Tele-MANAS (14416)</td></tr>
+<tr><td>Sunday</td><td>Practise</td><td>Single post</td><td>Weekly recap and a reminder to rest</td></tr>
+</table></div>
+</div></section>
+
+<section id="ethics" class="alt"><div class="wrap">
+<h2>Ethics, copyright and legal awareness</h2>
+<div class="grid">
+<div class="card"><h3>APA ethics and professional behaviour</h3><p>The APA Ethics Code asks psychologists to avoid harm, be honest and respect people’s dignity. Online, that means sharing accurate information and not giving diagnoses or personal advice through public posts.</p></div>
+<div class="card"><h3>Confidentiality and boundaries</h3><p>I never share details that could identify a client or child I have observed. I keep a clear line between my personal and professional online presence.</p></div>
+<div class="card"><h3>Copyright and Creative Commons</h3><p>Creative work is protected by copyright automatically. Creative Commons licences tell others how they may reuse it, so I check the licence and follow its terms before using anything.</p></div>
+<div class="card"><h3>Image sourcing and attribution</h3><p>I use my own images or properly licensed ones, and credit the creator, source and licence every time.</p></div>
+<div class="card"><h3>Information Technology Act, 2000</h3><p>India’s main law on electronic records and cyber offences. It includes provisions on identity theft, impersonation and violating someone’s privacy through images. I post only what I have the right to share.</p></div>
+<div class="card"><h3>DPDP Act, 2023</h3><p>India’s Digital Personal Data Protection Act focuses on consent and the safe handling of personal data. Its rules were notified in November 2025 and are being phased in. I do not collect or publish anyone else’s personal data here.</p></div>
+</div>
+<p style="margin-top:1.4rem"><b>How this portfolio applies these principles:</b> no client or case details appear anywhere, all content is my own writing, the graphics were designed for this site, the only photograph is of me, and sources are listed below. This site is for education and is not a substitute for professional help.</p>
+</div></section>
+
+<section id="reflection"><div class="wrap">
+<h2>Reflection</h2>
+<p>Building this portfolio showed me that explaining psychology well is a skill of its own. I had to turn ideas like stress responses and reinforcement into short, clear pieces without making them less accurate, and checking each claim against a source became a habit.</p>
+<p>I developed skills in layout, visual hierarchy, content planning and referencing, and I became more aware of the ethical and legal side of sharing information online. The main challenges were keeping the design simple while fitting in every section, and keeping each piece short enough to read quickly. Next, I would like to add a short video or audio piece.</p>
+</div></section>
+
+<section id="references" class="alt"><div class="wrap">
+<h2>References and credits</h2>
+<ul class="refs" style="list-style:none;padding:0">
+<li>American Psychological Association. (2017). <i>Ethical principles of psychologists and code of conduct</i> (2002, amended effective June 1, 2010, and January 1, 2017). https://www.apa.org/ethics/code</li>
+<li>American Psychological Association. (2018, November 1). <i>Stress effects on the body</i>. https://www.apa.org/topics/stress/body</li>
+<li>Creative Commons. (n.d.). <i>About CC licenses</i>. https://creativecommons.org/share-your-work/cclicenses/</li>
+<li>Government of India. (2000). <i>The Information Technology Act, 2000</i> (Act No. 21 of 2000).</li>
+<li>Government of India. (2023). <i>The Digital Personal Data Protection Act, 2023</i> (Act No. 22 of 2023).</li>
+<li>Lazarus, R. S., &amp; Folkman, S. (1984). <i>Stress, appraisal, and coping</i>. Springer.</li>
+<li>Skinner, B. F. (1953). <i>Science and human behavior</i>. Macmillan.</li>
+<li>World Health Organization. (2022). <i>World mental health report: Transforming mental health for all</i>. https://www.who.int/publications/i/item/9789240049338</li>
+</ul>
+<p><b>Image credits:</b> Profile photograph: own image. Infographics, poster cards and animation: original designs for this portfolio. No third-party images are used.</p>
+</div></section>
+
+<footer><div class="wrap">
+<p>V Sumana | B.Sc. (Hons.) Psychology, PES University, Bangalore</p>
+<p>Created for Managing Digital Design and Media. © 2026 V Sumana.</p>
+</div></footer>
+
+<script>
+document.querySelectorAll('.flip').forEach(function(b){b.addEventListener('click',function(){b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true')})});
+(function(){
+var orb=document.getElementById('orb'),btn=document.getElementById('bb'),t=null,i=0;
+var steps=[['Breathe in',true],['Hold',true],['Breathe out',false],['Hold',false]];
+function tick(){var s=steps[i%4];orb.textContent=s[0];orb.classList.toggle('in',s[1]);i++}
+btn.addEventListener('click',function(){
+if(t){clearInterval(t);t=null;orb.classList.remove('in');orb.textContent='Ready';btn.textContent='Start';return}
+i=0;tick();t=setInterval(tick,4000);btn.textContent='Stop'});
+})();
+</script>
+</body>
+</html>
